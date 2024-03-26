@@ -18,9 +18,12 @@ const BookDetails = () => {
     image,
   } = book;
 
-  const handleRead = (book) => {
-    saveBook(book);
-    
+  const handleRead = () => {
+    saveBook(book, "read"); // Pass the category "read" to saveBook function
+  };
+
+  const handleWishlist = () => {
+    saveBook(book, "wishlist"); // Pass the category "wishlist" to saveBook function
   };
 
   return (
@@ -67,12 +70,12 @@ const BookDetails = () => {
           </div>
           <div className="flex gap-4 mt-4">
             <button
-              onClick={() => handleRead(book)}
+              onClick={handleRead}
               className="btn btn-outline"
             >
               Read
             </button>
-            <button className="btn btn-accent">Wishlist</button>
+            <button onClick={handleWishlist} className="btn btn-accent">Wishlist</button>
           </div>
         </div>
       </div>
