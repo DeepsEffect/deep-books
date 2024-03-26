@@ -10,6 +10,8 @@ import PagesToRead from "./Components/PagesToRead";
 import BookDetails from "./Components/BookDetails";
 // eslint-disable-next-line no-unused-vars
 import toast, { Toaster } from "react-hot-toast";
+import ReadBooks from "./Components/ReadBooks";
+import Wishlist from "./Components/Wishlist";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +25,16 @@ const router = createBrowserRouter([
       {
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>,
+        children: [
+          {
+            index: true,
+            element: <ReadBooks></ReadBooks>,
+          },
+          {
+            path: "wishlist",
+            element: <Wishlist></Wishlist>,
+          },
+        ],
       },
       {
         path: "/pagesToRead",
