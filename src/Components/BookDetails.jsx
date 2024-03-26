@@ -19,11 +19,11 @@ const BookDetails = () => {
   } = book;
 
   const handleRead = () => {
-    saveBook(book, "read"); // Pass the category "read" to saveBook function
+    saveBook(book, "read");
   };
 
   const handleWishlist = () => {
-    saveBook(book, "wishlist"); // Pass the category "wishlist" to saveBook function
+    saveBook(book, "wishlist");
   };
 
   return (

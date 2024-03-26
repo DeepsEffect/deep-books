@@ -4,10 +4,11 @@ import BookCard from "../Components/BookCard";
 
 const ReadBooks = () => {
   const [read, setRead] = useState([]);
-  useEffect(() => {
+  useEffect(() => { 
     const storedBooks = getBooks();
     setRead(storedBooks);
   }, []);
+  
   return (
     <div>
       {read.map((book) => (
