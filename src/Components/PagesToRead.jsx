@@ -1,6 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Cell,
+  Tooltip,
+} from "recharts";
 import { getBooks } from "../utils";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
@@ -37,7 +45,7 @@ const PagesToRead = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center lg:p-10 bg-gray-100 rounded-2xl">
       <BarChart
         width={1170}
         height={756}
@@ -47,6 +55,7 @@ const PagesToRead = () => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="bookName" />
         <YAxis />
+        <Tooltip />
         <Bar
           dataKey="totalPages"
           fill="#8884d8"
