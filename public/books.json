@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/220px-The_Great_Gatsby_Cover_1925_Retouched.jpg",
+    "review": "A masterpiece of American literature.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Classic Fiction",
+    "tags": ["Fiction", "Romance", "Drama"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/220px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+    "review": "A poignant exploration of race and morality.",
+    "totalPages": 281,
+    "rating": 4.8,
+    "category": "Classic Fiction",
+    "tags": ["Fiction", "Legal Drama"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 3,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/51/1984_first_edition_cover.jpg",
+    "review": "A chilling vision of a dystopian future.",
+    "totalPages": 328,
+    "rating": 4.7,
+    "category": "Science Fiction",
+    "tags": ["Fiction", "Political Fiction"],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 4,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/PrideAndPrejudiceTitlePage.jpg/220px-PrideAndPrejudiceTitlePage.jpg",
+    "review": "A delightful comedy of manners.",
+    "totalPages": 279,
+    "rating": 4.6,
+    "category": "Classic Fiction",
+    "tags": ["Fiction", "Romance"],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 5,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg/220px-The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg",
+    "review": "A timeless coming-of-age story.",
+    "totalPages": 224,
+    "rating": 4.4,
+    "category": "Modern Fiction",
+    "tags": ["Fiction", "Bildungsroman"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 6,
+    "bookName": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg/220px-Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg",
+    "review": "A magical journey into a world of wonder.",
+    "totalPages": 332,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": ["Fantasy", "Children's Literature"],
+    "publisher": "Bloomsbury",
+    "yearOfPublishing": 1997
+  }
+]
