@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div className="hero h-[554px] bg-base-200 mt-6 rounded-2xl">
@@ -17,7 +19,9 @@ const Banner = () => {
               view of how you see this world and life in general.
             </p>
           </div>
-          <button className="btn btn-primary font-bold">View The List</button>
+          <NavLink to={'/listedBooks'}>
+            <button className="btn btn-success font-bold text-white">View The List</button>
+          </NavLink>
         </div>
       </div>
     </div>

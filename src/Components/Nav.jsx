@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Nav = () => {
   return (
     <div className="navbar bg-base-100 font-work-sans mt-6">
@@ -23,30 +25,51 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            <NavLink to={"/"}>
               <a>Home</a>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink to={"/listedBooks"}>
               <a>Listed Books</a>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink to={"/pagesToRead"}>
               <a>Pages To Read</a>
-            </li>
+            </NavLink>
           </ul>
         </div>
         <a className="btn btn-ghost font-bold text-2xl">Deep&apos;s Books</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-[#131313] text-base font-normal space-x-6">
-          <li>
-            <a className="btn btn-outline btn-success px-6">Home</a>
-          </li>
-          <li>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success"
+                : "btn btn-outline border-none"
+            }
+          >
+            <a>Home</a>
+          </NavLink>
+          <NavLink
+            to={"/listedBooks"}
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success"
+                : "btn btn-outline border-none"
+            }
+          >
             <a>Listed Books</a>
-          </li>
-          <li>
+          </NavLink>
+          <NavLink
+            to={"/pagesToRead"}
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success"
+                : "btn btn-outline border-none"
+            }
+          >
             <a>Pages To Read</a>
-          </li>
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end space-x-3">

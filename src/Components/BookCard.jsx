@@ -14,7 +14,7 @@ const BookCard = ({ book }) => {
             </div>
           ))}
         </div>
-        <h2 className="card-title">{bookName}</h2>
+        <h2 className="card-title font-playfair font-bold text-2xl text-[#131313]">{bookName}</h2>
         <p>by: {author}</p>
         <div className="divider m-0"></div>
         <div className="flex justify-between">
