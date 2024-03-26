@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -36,7 +36,9 @@ const Nav = () => {
             </NavLink>
           </ul>
         </div>
-        <a className="btn btn-ghost font-bold text-2xl">Deep&apos;s Books</a>
+        <Link to={"/"} className="btn btn-ghost font-bold text-2xl">
+          Deep&apos;s Books
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-[#131313] text-base font-normal space-x-6">
@@ -48,7 +50,7 @@ const Nav = () => {
                 : "btn btn-outline border-none"
             }
           >
-            <a>Home</a>
+            Home
           </NavLink>
           <NavLink
             to={"/listedBooks"}
@@ -58,7 +60,7 @@ const Nav = () => {
                 : "btn btn-outline border-none"
             }
           >
-            <a>Listed Books</a>
+            Listed Books
           </NavLink>
           <NavLink
             to={"/pagesToRead"}
@@ -68,7 +70,7 @@ const Nav = () => {
                 : "btn btn-outline border-none"
             }
           >
-            <a>Pages To Read</a>
+            Pages To Read
           </NavLink>
         </ul>
       </div>

@@ -1,8 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const BookCard = ({ book }) => {
-  const { bookName, author, image, rating, category, tags } = book;
+  const {bookId, bookName, author, image, rating, category, tags } = book;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl border-2 mt-6 flex flex-col">
+    <NavLink to={`/bookDetails/${bookId}`} className="card w-96 bg-base-100 shadow-xl border-2 mt-6 flex flex-col">
       <figure className="h-[400px] p-8">
         <img src={image} alt="book image" className="" />
       </figure>
@@ -22,7 +24,7 @@ const BookCard = ({ book }) => {
           <p>{rating}</p>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 
