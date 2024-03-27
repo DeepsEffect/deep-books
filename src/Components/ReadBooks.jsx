@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { getBooks } from "../utils";
-import BookCard from "../Components/BookCard";
+import ListBookCard from "./ListBookCard";
 
 const ReadBooks = () => {
   const [read, setRead] = useState([]);
-  useEffect(() => { 
+  useEffect(() => {
     const storedBooks = getBooks();
     setRead(storedBooks);
   }, []);
-  
+
   return (
     <div>
       {read.map((book) => (
-        <BookCard book={book} key={book.bookId}></BookCard>
+        <ListBookCard book={book} key={book.bookId}></ListBookCard>
       ))}
     </div>
   );
