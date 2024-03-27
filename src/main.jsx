@@ -13,6 +13,7 @@ import toast, { Toaster } from "react-hot-toast";
 import ReadBooks from "./Components/ReadBooks";
 import Wishlist from "./Components/Wishlist";
 import FavoriteBooks from "./Pages/FavoriteBooks";
+import Faq from "./Components/Faq";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/favoriteBooks',
         element: <FavoriteBooks></FavoriteBooks>
+      },
+      {
+        path: '/faq',
+        element: <Faq></Faq>
       },
       {
         path: "/bookDetails/:bookId",
