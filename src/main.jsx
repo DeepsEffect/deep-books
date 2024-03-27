@@ -14,6 +14,7 @@ import ReadBooks from "./Components/ReadBooks";
 import Wishlist from "./Components/Wishlist";
 import FavoriteBooks from "./Pages/FavoriteBooks";
 import Faq from "./Components/Faq";
+import NotFound from "./Components/NotFound";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,17 +44,21 @@ const router = createBrowserRouter([
         element: <PagesToRead></PagesToRead>,
       },
       {
-        path: '/favoriteBooks',
-        element: <FavoriteBooks></FavoriteBooks>
+        path: "/favoriteBooks",
+        element: <FavoriteBooks></FavoriteBooks>,
       },
       {
-        path: '/faq',
-        element: <Faq></Faq>
+        path: "/faq",
+        element: <Faq></Faq>,
       },
       {
         path: "/bookDetails/:bookId",
         element: <BookDetails></BookDetails>,
         loader: () => fetch("/books.json"),
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },
