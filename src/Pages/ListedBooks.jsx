@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -11,7 +12,7 @@ const ListedBooks = () => {
       {/* sort by menu */}
       <div className="dropdown flex justify-center">
         <div tabIndex={0} role="button" className="btn btn-success text-white m-1">
-          Click
+          Sort By<RiArrowDropDownLine className="text-4xl"/>
         </div>
         <ul
           tabIndex={0}

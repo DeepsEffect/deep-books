@@ -4,7 +4,7 @@ import BookCard from "./BookCard";
 const Books = () => {
   const books = useLoaderData();
   return (
-    <section className="mt-6">
+    <section className=" mt-6 lg:mt-16">
       <h2 className="font-playfair text-2xl lg:text-4xl font-bold text-center">Books</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-6">
         {books.map((book) => (

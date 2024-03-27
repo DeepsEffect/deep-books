@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import { FaRegStar } from "react-icons/fa";
 /* eslint-disable react/prop-types */
 const BookCard = ({ book }) => {
   const { bookId, bookName, author, image, rating, category, tags } = book;
@@ -14,7 +14,7 @@ const BookCard = ({ book }) => {
       <div className="card-body px-8 py-0 pb-6 ">
         <div className="card-actions ">
           {tags.map((tag, idx) => (
-            <div className="badge badge-outline badge-success" key={idx}>
+            <div className="badge badge-outline badge-success font-medium" key={idx}>
               {tag}
             </div>
           ))}
@@ -22,11 +22,11 @@ const BookCard = ({ book }) => {
         <h2 className="card-title font-playfair font-bold text-2xl text-[#131313]">
           {bookName}
         </h2>
-        <p>by: {author}</p>
+        <p className="font-medium">by: {author}</p>
         <div className="divider m-0"></div>
         <div className="flex justify-between">
           <p>{category}</p>
-          <p>{rating}</p>
+          <p className="flex items-center gap-1">{rating} <FaRegStar /></p>
         </div>
       </div>
     </NavLink>

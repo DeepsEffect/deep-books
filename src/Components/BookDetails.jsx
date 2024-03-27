@@ -1,6 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { favoriteBooks, getBooks, readBooks, wishlistBooks } from "../utils";
 import toast from "react-hot-toast";
+import { FaReadme } from "react-icons/fa";
+import { FaClipboardList } from "react-icons/fa";
+import { MdOutlineFavorite } from "react-icons/md";
 
 const BookDetails = () => {
   const bookData = useLoaderData();
@@ -45,9 +48,10 @@ const BookDetails = () => {
         <img src={image} className="w-full rounded-lg shadow-2xl" />
         <div className="lg:ml-12">
           <h1 className=" text-2xl lg:text-5xl font-bold">{bookName}</h1>
-          <p>by: {author}</p>
-          <p>{category}</p>
-          <div className="divider"></div>
+          <p className="font-semibold">by: {author}</p>
+          <div className="divider m-0"></div>
+          <p className="font-medium">{category}</p>
+          <div className="divider m-0"></div>
           <p className="py-6">
             <span className="font-bold">Review: </span>
             {review}
@@ -56,28 +60,28 @@ const BookDetails = () => {
             <div className="flex gap-4 items-center">
               <span className="font-bold">Tags: </span>
               {tags.map((tag, idx) => (
-                <div className="badge badge-outline badge-success" key={idx}>
+                <div className="badge badge-outline badge-success font-semibold" key={idx}>
                   {tag}
                 </div>
               ))}
             </div>
             <div className="divider"></div>
-            <div>
-              <p>
+            <div className="w-full lg:w-80">
+              <p className="flex justify-between">
                 <span>number of pages: </span>
-                {totalPages}
+                <span className="font-semibold ">{totalPages}</span>
               </p>
-              <p>
+              <p className="flex justify-between">
                 <span>Publisher: </span>
-                {publisher}
+                <span className="font-semibold ">{publisher}</span>
               </p>
-              <p>
+              <p className="flex justify-between">
                 <span>Year Of Publishing: </span>
-                {yearOfPublishing}
+                <span className="font-semibold ">{yearOfPublishing}</span>
               </p>
-              <p>
+              <p className="flex justify-between">
                 <span>Rating: </span>
-                {rating}
+                <span className="font-semibold">{rating}</span>
               </p>
             </div>
           </div>
@@ -86,19 +90,19 @@ const BookDetails = () => {
               onClick={() => handleRead(book)}
               className="btn btn-info text-white"
             >
-              Read
+              <FaReadme className="text-xl"/>Read
             </button>
             <button
               onClick={() => handleWishlist(book)}
               className="btn btn-accent text-white"
             >
-              Wishlist
+              <FaClipboardList className="text-xl" />Wishlist
             </button>
             <button
               onClick={() => handleAddToFavorite(book)}
               className="btn btn-error text-white"
             >
-              Add To Favorite
+              <MdOutlineFavorite className="text-xl"/> To Favorite
             </button>
           </div>
         </div>

@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { TfiLocationPin } from "react-icons/tfi";
+import { FaRegUser } from "react-icons/fa";
+import { VscSaveAll } from "react-icons/vsc";
 /* eslint-disable react/prop-types */
 const ListBookCard = ({ book }) => {
   const {
@@ -24,21 +27,21 @@ const ListBookCard = ({ book }) => {
           <h1 className="text-2xl font-bold font-playfair flex-grow">
             {bookName}
           </h1>
-          <p>
-            <span>by: </span>
+          <p className="font-medium">
+            <span>By: </span>
             {author}
           </p>
           <div className="card-actions mt-2">
             {tags.map((tag, idx) => (
-              <div className="badge badge-outline badge-success" key={idx}>
-                {tag}
+              <div className="badge badge-outline badge-success font-medium" key={idx}>
+                #{tag}
               </div>
             ))}
-            <p>Year Of Publishing: {yearOfPublishing}</p>
+            <p className="flex items-center gap-1 font-medium mt-4 lg:mt-0 lg:ml-6"><TfiLocationPin className="text-xl"/>Year Of Publishing: {yearOfPublishing}</p>
           </div>
           <div className="flex gap-2">
-            <p>Publisher: {publisher}</p>
-            <p>Pages: {totalPages}</p>
+            <p className="flex items-center gap-1 "><FaRegUser />Publisher: {publisher}</p>
+            <p className="flex items-center gap-1 lg:ml-10 "><VscSaveAll />Pages: {totalPages}</p>
           </div>
           <div className="divider m-0"></div>
           <div className="flex flex-col lg:flex-row gap-2 mt-4 ">
