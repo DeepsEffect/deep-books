@@ -19,7 +19,7 @@ const Faq = () => {
             How can I purchase books on Deep Books?
             </h3>
             <p className="md:pl-0 md:col-span-7">
-            To purchase books on Deep Books, simply browse our collection and click on the book you're interested in. You will be directed to a page where you can find more information about the book and a link to purchase it from our partner retailers.
+            To purchase books on Deep Books, simply browse our collection and click on the book you are interested in. You will be directed to a page where you can find more information about the book and a link to purchase it from our partner retailers.
             </p>
           </div>
           <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
@@ -35,7 +35,7 @@ const Faq = () => {
             How can I contribute book reviews to Deep Books?
             </h3>
             <p className="md:pl-0 md:col-span-7">
-            We welcome book reviews from our users! To contribute a review, simply navigate to the book's page and scroll down to the reviews section. You will find an option to submit your review along with a rating. Your review will help other readers make informed decisions about their next read.
+            We welcome book reviews from our users! To contribute a review, simply navigate to the books page and scroll down to the reviews section. You will find an option to submit your review along with a rating. Your review will help other readers make informed decisions about their next read.
             </p>
           </div>
           <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">

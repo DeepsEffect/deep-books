@@ -6,7 +6,7 @@ const BookCard = ({ book }) => {
   return (
     <NavLink
       to={`/bookDetails/${bookId}`}
-      className="card w-96 bg-base-100 shadow-xl border-2 mt-6 flex flex-col"
+      className="card lg:w-96 bg-base-100 shadow-xl border-2 mt-6 flex flex-col"
     >
       <figure className="h-[400px] p-8 transition hover:scale-105">
         <img src={image} alt="book image" className="" />
