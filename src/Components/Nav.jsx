@@ -42,7 +42,7 @@ const Nav = () => {
             </NavLink>
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost font-bold text-lg lg:text-2xl">
+        <Link to={"/"} className=" font-bold text-lg lg:text-2xl">
           Deep Books
         </Link>
       </div>

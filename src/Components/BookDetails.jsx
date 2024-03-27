@@ -40,11 +40,11 @@ const BookDetails = () => {
   };
 
   return (
-    <div className="hero bg-base-200 rounded-2xl mt-4">
+    <div className="hero lg:bg-base-200 lg:rounded-2xl mt-4">
       <div className="hero-content flex-col lg:flex-row">
         <img src={image} className="w-full rounded-lg shadow-2xl" />
         <div className="lg:ml-12">
-          <h1 className="text-5xl font-bold">{bookName}</h1>
+          <h1 className=" text-2xl lg:text-5xl font-bold">{bookName}</h1>
           <p>by: {author}</p>
           <p>{category}</p>
           <div className="divider"></div>
@@ -81,7 +81,7 @@ const BookDetails = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-4 mt-4">
+          <div className="flex flex-col lg:flex-row gap-4 mt-4">
             <button
               onClick={() => handleRead(book)}
               className="btn btn-info text-white"
