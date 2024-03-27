@@ -32,3 +32,15 @@ export const wishlistBooks = (book) => {
   localStorage.setItem("wishlistBooks", JSON.stringify(books));
   toast.success(`"${book.bookName}" is successfully added to the Wishlist`);
 };
+
+//add to favorite
+export const favoriteBooks = (book) => {
+  let books = getBooks('favoriteBooks');
+  const isExist = books.find(b => b.bookId === book.bookId)
+  if (isExist) {
+    return toast.error('Book is already added to the Favorite Books')
+  }
+  books.push(book)
+  localStorage.setItem('favoriteBooks', JSON.stringify(books))
+  toast.success('Book Is added to the Favorites')
+}

@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { getBooks, readBooks, wishlistBooks } from "../utils";
+import { favoriteBooks, getBooks, readBooks, wishlistBooks } from "../utils";
 import toast from "react-hot-toast";
 
 const BookDetails = () => {
@@ -33,6 +33,10 @@ const BookDetails = () => {
     } else {
       wishlistBooks(book);
     }
+  };
+
+  const handleAddToFavorite = () => {
+    favoriteBooks(book);
   };
 
   return (
@@ -80,15 +84,21 @@ const BookDetails = () => {
           <div className="flex gap-4 mt-4">
             <button
               onClick={() => handleRead(book)}
-              className="btn btn-outline"
+              className="btn btn-info text-white"
             >
               Read
             </button>
             <button
               onClick={() => handleWishlist(book)}
-              className="btn btn-accent"
+              className="btn btn-accent text-white"
             >
               Wishlist
+            </button>
+            <button
+              onClick={() => handleAddToFavorite(book)}
+              className="btn btn-error text-white"
+            >
+              Add To Favorite
             </button>
           </div>
         </div>
