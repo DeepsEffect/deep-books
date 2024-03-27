@@ -5,7 +5,7 @@ const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
   return (
     <div>
-      <div className="font-bold text-2xl text-center bg-gray-200 py-4 rounded-xl mb-6">
+      <div className="font-bold text-xl lg:text-2xl text-center bg-gray-200 py-4 lg:rounded-xl mb-6">
         <h2>Books</h2>
       </div>
       {/* sort by menu */}
@@ -28,7 +28,7 @@ const ListedBooks = () => {
           </li>
         </ul>
       </div>
-      <div className="flex items-start -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:text-gray-800">
+      <div className="flex items-start mt-6 lg:mt-4 lg:-mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:text-gray-800">
         <Link
           to={""}
           onClick={() => setTabIndex(0)}

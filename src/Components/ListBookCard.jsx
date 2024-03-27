@@ -16,8 +16,8 @@ const ListBookCard = ({ book }) => {
 
   return (
     <div className="hero bg-base-100 border p-4 lg:p-8 mt-10 rounded-2xl">
-      <div className="flex w-full md:gap-6 lg:gap-10 items-center">
-        <figure className="">
+      <div className="flex-row lg:flex w-full md:gap-6 lg:gap-10 items-center">
+        <figure className="flex justify-center">
           <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
         </figure>
         <div className="w-full space-y-4">
@@ -41,7 +41,7 @@ const ListBookCard = ({ book }) => {
             <p>Pages: {totalPages}</p>
           </div>
           <div className="divider m-0"></div>
-          <div className="flex gap-2 mt-4">
+          <div className="flex flex-col lg:flex-row gap-2 mt-4 ">
             <button className="btn btn-outline btn-primary rounded-full">
               Category: {category}
             </button>
