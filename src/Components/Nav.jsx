@@ -41,7 +41,7 @@ const Nav = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-[#131313] text-base font-normal space-x-6">
+        <ul className="menu menu-horizontal px-1 text-[#131313] text-base font-normal space-x-4">
           <NavLink
             to={"/"}
             className={({ isActive }) =>
@@ -71,6 +71,16 @@ const Nav = () => {
             }
           >
             Pages To Read
+          </NavLink>
+          <NavLink
+            to={"/favoriteBooks"}
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success"
+                : "btn btn-outline border-none"
+            }
+          >
+            Favorite Books
           </NavLink>
         </ul>
       </div>
