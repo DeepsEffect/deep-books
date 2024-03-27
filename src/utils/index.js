@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
-export const getBooks = () => {
+export const getBooks = (key) => {
   let books = [];
-  const storedBooks = localStorage.getItem("books");
+  const storedBooks = localStorage.getItem(key);
   if (storedBooks) {
     books = JSON.parse(storedBooks);
   }
@@ -9,37 +9,24 @@ export const getBooks = () => {
   return books;
 };
 
-export const saveBook = (book, category) => {
-  let storedBooks = getBooks();
-  const isAlreadyInList = storedBooks.some(
-    (savedBook) => savedBook.bookId === book.bookId
-  );
-
-  if (isAlreadyInList) {
-    const isInReadBooks = storedBooks.some(
-      (savedBook) =>
-        savedBook.bookId === book.bookId && savedBook.category === "read"
-    );
-
-    if (isInReadBooks && category === "wishlist") {
-      return toast.error("Book already marked as Read");
-    } else if (!isInReadBooks && category === "read") {
-      const updatedBooks = storedBooks.map((savedBook) =>
-        savedBook.bookId === book.bookId
-          ? { ...savedBook, category: "read" }
-          : savedBook
-      );
-      localStorage.setItem("books", JSON.stringify(updatedBooks));
-      toast.success("Book moved to Read Books");
-      return;
-    } else {
-      return toast.error("Book already exists in this list");
-    }
+export const readBooks = book => {
+  let books = getBooks('readBooks')
+  const isExist = books.find(b => b.bookId === book.bookId)
+  if (isExist) {
+    return toast.error('already exists')
   }
+  books.push(book)
+  localStorage.setItem('readBooks', JSON.stringify(books))
+  toast.success('added successfully')
+}
 
-  const updatedBooks = [...storedBooks, { ...book, category }];
-  localStorage.setItem("books", JSON.stringify(updatedBooks));
-  const successMessage =
-    category === "read" ? "Book added to Read Books" : "Book added to Wishlist";
-  toast.success(successMessage);
-};
+export const wishlistBooks = book => {
+  let books = getBooks('wishlistBooks')
+  const isExist = books.find(b => b.bookId === book.bookId)
+  if (isExist) {
+    return toast.error('already exists')
+  }
+  books.push(book)
+  localStorage.setItem('wishlistBooks', JSON.stringify(books))
+  toast.success('added successfully')
+}

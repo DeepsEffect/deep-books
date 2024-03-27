@@ -34,7 +34,7 @@ const PagesToRead = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const books = await getBooks();
+        const books = await getBooks('readBooks');
         setData(books);
       } catch (error) {
         console.error("Error fetching read-listed books:", error);

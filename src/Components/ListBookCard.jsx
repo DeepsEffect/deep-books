@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 /* eslint-disable react/prop-types */
 const ListBookCard = ({ book }) => {
   const {
@@ -14,6 +13,7 @@ const ListBookCard = ({ book }) => {
     rating,
     bookId,
   } = book;
+  console.log(book);
 
   return (
     <div className="hero bg-base-100 border p-4 lg:p-8 mt-10 rounded-2xl">

@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveBook } from "../utils";
+import { readBooks, wishlistBooks } from "../utils";
 
 const BookDetails = () => {
   const bookData = useLoaderData();
@@ -19,11 +19,11 @@ const BookDetails = () => {
   } = book;
 
   const handleRead = () => {
-    saveBook(book, "read");
+    readBooks(book);
   };
 
   const handleWishlist = () => {
-    saveBook(book, "wishlist");
+    wishlistBooks(book);
   };
 
   return (
@@ -70,12 +70,17 @@ const BookDetails = () => {
           </div>
           <div className="flex gap-4 mt-4">
             <button
-              onClick={handleRead}
+              onClick={() => handleRead(book)}
               className="btn btn-outline"
             >
               Read
             </button>
-            <button onClick={handleWishlist} className="btn btn-accent">Wishlist</button>
+            <button
+              onClick={() => handleWishlist(book)}
+              className="btn btn-accent"
+            >
+              Wishlist
+            </button>
           </div>
         </div>
       </div>

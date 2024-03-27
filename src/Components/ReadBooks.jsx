@@ -5,7 +5,7 @@ import ListBookCard from "./ListBookCard";
 const ReadBooks = () => {
   const [read, setRead] = useState([]);
   useEffect(() => {
-    const storedBooks = getBooks();
+    const storedBooks = getBooks('readBooks');
     setRead(storedBooks);
   }, []);
 
