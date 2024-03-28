@@ -25,21 +25,11 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm space-y-4 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <NavLink to={"/"}>
-              <a>Home</a>
-            </NavLink>
-            <NavLink to={"/listedBooks"}>
-              <a>Listed Books</a>
-            </NavLink>
-            <NavLink to={"/pagesToRead"}>
-              <a>Pages To Read</a>
-            </NavLink>
-            <NavLink to={"/favoriteBooks"}>
-              <a>Favorite Books</a>
-            </NavLink>
-            <NavLink to={"/faq"}>
-              <a>FAQ || Troubleshoot</a>
-            </NavLink>
+            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/listedBooks"}>Listed Books</NavLink>
+            <NavLink to={"/pagesToRead"}>Pages To Read</NavLink>
+            <NavLink to={"/favoriteBooks"}>Favorite Books</NavLink>
+            <NavLink to={"/faq"}>FAQ || Troubleshoot</NavLink>
           </ul>
         </div>
         <Link to={"/"} className=" font-bold text-lg lg:text-2xl">
