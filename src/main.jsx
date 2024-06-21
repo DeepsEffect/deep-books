@@ -15,6 +15,9 @@ import Wishlist from "./Components/Wishlist";
 import FavoriteBooks from "./Pages/FavoriteBooks";
 import Faq from "./Components/Faq";
 import NotFound from "./Components/NotFound";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import AuthProvider from "./providers/AuthProvider";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,6 +60,14 @@ const router = createBrowserRouter([
         loader: () => fetch("/books.json"),
       },
       {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
         path: "*",
         element: <NotFound></NotFound>,
       },
@@ -66,7 +77,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
     <Toaster></Toaster>,
   </React.StrictMode>
 );

@@ -1,6 +1,15 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Nav = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut();
+    toast.success('logged out successfully')
+  };
   return (
     <div className="navbar bg-base-100 font-work-sans lg:mt-6">
       <div className="navbar-start">
@@ -90,13 +99,31 @@ const Nav = () => {
           </NavLink>
         </ul>
       </div>
+
       <div className="lg:navbar-end space-x-3">
-        <a className="btn font-semibold text-sm lg:text-lg btn-success text-white">
-          Sign In{" "}
-        </a>
-        <a className="btn font-semibold text-sm lg:text-lg btn-accent text-white">
-          Sign Up
-        </a>
+        {user ? (
+          <div>
+            {user.email}
+            <button onClick={handleLogOut} className="btn ml-2">
+              Logout
+            </button>
+          </div>
+        ) : (
+          <>
+            <Link
+              to={"/login"}
+              className="btn font-semibold text-sm lg:text-lg btn-success text-white"
+            >
+              Sign In
+            </Link>
+            <Link
+              to={"/register"}
+              className="btn font-semibold text-sm lg:text-lg btn-accent text-white"
+            >
+              Sign Up
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
